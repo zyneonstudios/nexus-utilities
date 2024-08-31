@@ -9,26 +9,26 @@
 ---
 
 ### Contents
-- NexusUtilities
-- AES
-  - AESUtility: Encrypt and decrypt bytes with a key
-- File
-  - FileActions: Some actions for files like folder deletion
-  - FileExtractor: Extract files from zip and resources
-  - FileGetter: Read and download files
-- Json
-  - GsonUtility: Get GSON string and objects from files and urls
-- Logger
-  - NexusLogger: Output to console
-- Storage
-  - JsonStorage: Saving and reading stuff in a json file
-  - LocalStorage: Saving and reading stuff in local cache (gone after session)
-  - Storage (Interface)
-- Strings
-  - StringConverter: Convert strings
-  - StringGenerator: Generate strings
-- System
-  - OperatingSystem: Get OS information
+- [NexusUtilities](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/NexusUtilities)
+- [AES](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/aes/package-summary)
+  - [AESUtility: Encrypt and decrypt bytes with a key](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/aes/AESUtility)
+- [File](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/file/package-summary)
+  - [FileActions: Some actions for files like folder deletion](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/file/FileActions)
+  - [FileExtractor: Extract files from zip and resources](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/file/FileExtractor)
+  - [FileGetter: Read and download files](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/file/FileGetter)
+- [Json](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/json/package-summary)
+  - [GsonUtility: Get GSON string and objects from files and urls](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/json/GsonUtility)
+- [Logger](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/logger/package-summary)
+  - [NexusLogger: Output to console](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/logger/NexusLogger)
+- [Storage](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/storage/package-summary)
+  - [JsonStorage: Saving and reading stuff in a json file](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/storage/JsonStorage)
+  - [LocalStorage: Saving and reading stuff in local cache (gone after session)](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/storage/LocalStorage)
+  - [Storage (Interface)](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/storage/Storage)
+- [Strings](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/strings/package-summary)
+  - [StringConverter: Convert strings](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/strings/StringConverter)
+  - [StringGenerator: Generate strings](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/strings/StringGenerator)
+- [System](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/system/package-summary)
+  - [OperatingSystem: Get OS information](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/system/OperatingSystem)
 
 ---
 
