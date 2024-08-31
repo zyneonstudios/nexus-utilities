@@ -14,7 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URL;
 
-public class GsonUtil {
+public class GsonUtility {
 
     public static JsonObject getObject(String url) {
         try {
