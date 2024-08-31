@@ -57,7 +57,7 @@
                 <version>3.10.0</version>
                 <configuration>
                     <doclint>none</doclint> <docencoding>UTF-8</docencoding>
-                    <outputDirectory>${project.build.directory}/sites/apidocs</outputDirectory>
+                    <outputDirectory>${project.build.directory}/site/apidocs</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
