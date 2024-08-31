@@ -55,6 +55,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.10.0</version>
+                <configuration>
+                    <doclint>none</doclint> <docencoding>UTF-8</docencoding>
+                    <outputDirectory>${project.build.directory}/sites/apidocs</outputDirectory>
+                </configuration>
             </plugin>
         </plugins>
         <resources>
