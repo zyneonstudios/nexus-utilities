@@ -37,12 +37,12 @@ public class NexusLogger {
     }
 
     public void log(String message) {
-        System.out.println(getPrefix().replace( "%type%","LOG")+message);
+        System.out.println(getPrefix().replace("%type%","LOG")+message);
     }
 
     public void dbg(String debugMessage) {
         if(sendDebug)
-            System.out.println("\u001B[34m"+getPrefix().replace("%type%","DEB")+debugMessage);
+            System.out.println("\u001B[34m"+getPrefix().replace("%type%","DEB")+debugMessage+"\u001B[0m");
     }
 
     public void deb(String debugMessage) {
