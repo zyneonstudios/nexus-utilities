@@ -1,2 +1,6 @@
-# nexus-utilities
-Java library for utilities like storage objects
+# Nexus Utilities
+
+### Java 21 library designed to simplify the development of Java programs.
+
+---
+
