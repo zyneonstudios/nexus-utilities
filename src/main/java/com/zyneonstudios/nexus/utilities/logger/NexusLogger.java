@@ -67,7 +67,7 @@ public class NexusLogger {
                 err("Reason: "+reason);
             }
             if(possibleFixes!=null) {
-                String p = "Possible fix: ";
+                String p = "Possible fix(es): ";
                 for(String fix:possibleFixes) {
                     err(p+fix);
                     p = "";
