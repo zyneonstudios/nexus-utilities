@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class SQLStorage implements Storage{
+public class SQLStorage implements EditableStorage {
 
     private final SQL sql;
     private final String table;
@@ -78,22 +78,24 @@ public class SQLStorage implements Storage{
         return getBoolean(path);
     }
 
-    public boolean ensure(String key, String value) {
+    @Override
+    public boolean ensure(String key, Object value) {
         if(!has(key)) {
             return set(key, value);
         }
         return true;
     }
 
-    public boolean set(String key, String value) {
+    @Override
+    public boolean set(String key, Object value) {
         sql.disconnect();
         sql.connect();
         String query = "INSERT INTO `" + table + "` (`key`, `value`) VALUES (?, ?) ON DUPLICATE KEY UPDATE `value` = ?";
         try (Connection connection = sql.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, key);
-            statement.setString(2, value);
-            statement.setString(3, value);
+            statement.setString(2, value.toString());
+            statement.setString(3, value.toString());
             statement.execute();
             return true;
         } catch (SQLException e) {
@@ -102,6 +104,7 @@ public class SQLStorage implements Storage{
         }
     }
 
+    @Override
     public boolean delete(String key) {
         sql.disconnect();
         sql.connect();

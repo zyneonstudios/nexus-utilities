@@ -5,7 +5,7 @@ import java.io.*;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
-public class JsonStorage implements Storage {
+public class JsonStorage implements EditableStorage {
 
     private Gson gson;
     private File jsonFile;
@@ -108,6 +108,7 @@ public class JsonStorage implements Storage {
         return null;
     }
 
+    @Override
     public boolean ensure(String path, Object value) {
         if (get(path) == null) {
             set(path, value);
@@ -116,6 +117,7 @@ public class JsonStorage implements Storage {
         return true;
     }
 
+    @Override
     @SuppressWarnings("UnusedReturnValue")
     public boolean set(String path, Object value) {
         try {
@@ -162,6 +164,7 @@ public class JsonStorage implements Storage {
         }
     }
 
+    @Override
     public boolean delete(String path) {
         try {
             JsonObject rootNode = JsonParser.parseReader(jsonFileReader()).getAsJsonObject();

@@ -2,7 +2,7 @@ package com.zyneonstudios.nexus.utilities.storage;
 
 import java.util.HashMap;
 
-public class LocalStorage implements Storage {
+public class LocalStorage implements EditableStorage {
 
     private final HashMap<String, Object> storage = new HashMap<>();
 
@@ -75,12 +75,15 @@ public class LocalStorage implements Storage {
         return false;
     }
 
-    public void ensure(String key, Object defaultValue) {
+    @Override
+    public boolean ensure(String key, Object defaultValue) {
         if(get(key) == null) {
-            set(key, defaultValue);
+            return set(key, defaultValue);
         }
+        return true;
     }
 
+    @Override
     public boolean set(String path, Object content) {
         try {
             storage.remove(path);
@@ -91,6 +94,7 @@ public class LocalStorage implements Storage {
         }
     }
 
+    @Override
     public boolean delete(String path) {
         try {
             storage.remove(path);

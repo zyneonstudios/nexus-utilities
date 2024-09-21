@@ -1,4 +1,4 @@
-# Nexus Utilities `2024.9.2`
+# Nexus Utilities `2024.9.3`
 
 ### Java 21 library designed to simplify the development of Java programs.
 
