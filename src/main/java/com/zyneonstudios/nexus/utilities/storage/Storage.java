@@ -4,6 +4,8 @@ public interface Storage {
 
     Object get(String path);
 
+    boolean has(String path);
+
     String getString(String path);
 
     Integer getInteger(String path);

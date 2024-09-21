@@ -7,6 +7,11 @@ public class LocalStorage implements Storage {
     private final HashMap<String, Object> storage = new HashMap<>();
 
     @Override
+    public boolean has(String path) {
+        return get(path) != null;
+    }
+
+    @Override
     public Object get(String path) {
         if (storage.containsKey(path)) {
             return storage.get(path);
@@ -68,6 +73,12 @@ public class LocalStorage implements Storage {
             return (boolean)storage.get(path);
         }
         return false;
+    }
+
+    public void ensure(String key, Object defaultValue) {
+        if(get(key) == null) {
+            set(key, defaultValue);
+        }
     }
 
     public boolean set(String path, Object content) {

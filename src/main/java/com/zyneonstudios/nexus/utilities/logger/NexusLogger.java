@@ -10,11 +10,11 @@ public class NexusLogger {
     private String prefix;
 
     public NexusLogger(String name) {
-        prefix = "%time% | "+name+"-%type% | ";
+        prefix = "[%time%] (%type%) "+name+" | ";
     }
 
     private String getPrefix() {
-        return prefix.replaceFirst("%time%",new SimpleDateFormat("yyyy.MM.dd-HH:mm:ss").format(Calendar.getInstance().getTime()));
+        return prefix.replaceFirst("%time%",new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss").format(Calendar.getInstance().getTime()));
     }
 
     public void setName(String name, boolean lock) {
@@ -50,6 +50,6 @@ public class NexusLogger {
     }
 
     public void err(String errorMessage) {
-        System.err.println(getPrefix().replace("%type%","ERR")+errorMessage);
+        System.out.println("\u001B[31m"+getPrefix().replace("%type%","ERR")+errorMessage+"\u001B[0m");
     }
 }

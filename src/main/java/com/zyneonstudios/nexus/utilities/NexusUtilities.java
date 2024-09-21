@@ -5,7 +5,7 @@ import com.zyneonstudios.nexus.utilities.strings.StringGenerator;
 
 public class NexusUtilities {
 
-    private final static NexusLogger logger = new NexusLogger("NEX-"+ StringGenerator.generateAlphanumericString(4));
+    private final static NexusLogger logger = new NexusLogger("NEX"+ StringGenerator.generateAlphanumericString(3));
 
     public static NexusLogger getLogger() {
         return logger;

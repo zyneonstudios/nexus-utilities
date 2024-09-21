@@ -186,6 +186,11 @@ public class JsonStorage implements Storage {
         }
     }
 
+    @Override
+    public boolean has(String path) {
+        return get(path) != null;
+    }
+
     private FileReader jsonFileReader() throws FileNotFoundException {
         return new FileReader(jsonFile);
     }
