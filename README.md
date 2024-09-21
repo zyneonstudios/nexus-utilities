@@ -1,4 +1,4 @@
-# Nexus Utilities `2024.9-beta.3`
+# Nexus Utilities `2024.9`
 
 ### Java 21 library designed to simplify the development of Java programs.
 
@@ -20,9 +20,14 @@
   - [GsonUtility: Get GSON string and objects from files and urls](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/json/GsonUtility)
 - [Logger](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/logger/package-summary)
   - [NexusLogger: Output to console](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/logger/NexusLogger)
+- [SQL](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/sql/package-summary)
+  - [MySQL: Simplifies the creation of a mysql/mariadb connection](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/sql/MySQL)
+  - [SQL (Interface)](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/sql/SQL)
+  - [SQLite: Simplifies the creation of a sqlite connection](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/sql/SQLite)
 - [Storage](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/storage/package-summary)
   - [JsonStorage: Saving and reading stuff in a json file](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/storage/JsonStorage)
   - [LocalStorage: Saving and reading stuff in local cache (gone after session)](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/storage/LocalStorage)
+  - [SQLStorage: Saving and reading stuff in a (sql based) database](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/storage/SQLStorage)
   - [Storage (Interface)](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/storage/Storage)
 - [Strings](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/strings/package-summary)
   - [StringConverter: Convert strings](https://zyneonstudios.github.io/nexus-utilities/apidocs/com/zyneonstudios/nexus/utilities/strings/StringConverter)
