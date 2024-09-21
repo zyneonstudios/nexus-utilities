@@ -53,7 +53,7 @@ public class NexusLogger {
         System.out.println("\u001B[31m"+getPrefix().replace("%type%","ERR")+errorMessage+"\u001B[0m");
     }
 
-    public void printErr(String prefix, String type, String message, String reason, String fix, StackTraceElement[] cause) {
+    public void printErr(String prefix, String type, String message, String reason, StackTraceElement[] cause, String... possibleFixes) {
         if(message!=null) {
             if(prefix == null) {
                 prefix = getPrefix();
@@ -66,8 +66,12 @@ public class NexusLogger {
             if(reason!=null) {
                 err("Reason: "+reason);
             }
-            if(fix!=null) {
-                err("Possible fix: "+fix);
+            if(possibleFixes!=null) {
+                String p = "Possible fix: ";
+                for(String fix:possibleFixes) {
+                    err(p+fix);
+                    p = "";
+                }
             }
             if(cause!=null) {
                 err(" ");
