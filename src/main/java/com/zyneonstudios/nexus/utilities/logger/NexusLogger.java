@@ -52,4 +52,31 @@ public class NexusLogger {
     public void err(String errorMessage) {
         System.out.println("\u001B[31m"+getPrefix().replace("%type%","ERR")+errorMessage+"\u001B[0m");
     }
+
+    public void printErr(String prefix, String type, String message, String reason, String fix, StackTraceElement[] cause) {
+        if(message!=null) {
+            if(prefix == null) {
+                prefix = getPrefix();
+            }
+            if(type == null) {
+                type = "ERROR";
+            }
+            err("===("+prefix+")===============================================================/"+type+"/===");
+            err(message);
+            if(reason!=null) {
+                err("Reason: "+reason);
+            }
+            if(fix!=null) {
+                err("Possible fix: "+fix);
+            }
+            if(cause!=null) {
+                err(" ");
+                err("Caused by:");
+                for(StackTraceElement element:cause) {
+                    err(" "+element.toString());
+                }
+            }
+            err("===/"+type+"/===============================================================("+prefix+")===");
+        }
+    }
 }
